@@ -1,0 +1,9 @@
+fictional_id,wc_percent,potential_bopd,quality,integrity,feasibility,potential_rating,water_tolerance_rating,score,decision,provenance
+DEMO-W01,30,150,5,4,5,5,4,93.0,priority,FICTIONAL
+DEMO-W02,57,95,4,4,4,4,3,78.0,priority,FICTIONAL
+DEMO-W03,88,18,4,3,2,1,1,47.0,hold,FICTIONAL
+DEMO-W04,23,185,3,2,4,5,5,72.0,hold,FICTIONAL
+DEMO-W05,42,115,4,5,4,4,4,85.0,priority,FICTIONAL
+DEMO-W06,73,45,3,4,3,2,2,59.0,hold,FICTIONAL
+DEMO-W07,35,125,5,3,4,4,4,79.0,priority,FICTIONAL
+DEMO-W08,65,65,2,2,2,3,2,44.0,hold,FICTIONAL

@@ -1,0 +1,9 @@
+*.bak
+__pycache__/
+.pytest_cache/
+.playwright-cli/
+node_modules/
+.vercel/
+.env
+.env.*
+artifacts/

@@ -1,0 +1,14 @@
+{
+  "description": "Illustrative rigless intervention work package; fictional unit rates, quantities and estimates, not a real AFE",
+  "currency": "IDR million",
+  "contingency_pct": 12,
+  "cost_lines": [
+    {"id":"BOQ-01","description":"Well history verification & program design","unit":"lot","quantity":1,"unit_rate_midr":85},
+    {"id":"BOQ-02","description":"Site access and HSE readiness","unit":"lot","quantity":1,"unit_rate_midr":220},
+    {"id":"BOQ-03","description":"Rigless unit, crew & equipment","unit":"day","quantity":4,"unit_rate_midr":120},
+    {"id":"BOQ-04","description":"Well logging / diagnostic services","unit":"run","quantity":2,"unit_rate_midr":130},
+    {"id":"BOQ-05","description":"Completion consumables & spare parts","unit":"lot","quantity":1,"unit_rate_midr":140},
+    {"id":"BOQ-06","description":"Backup pressure-control equipment package","unit":"lot","quantity":1,"unit_rate_midr":200},
+    {"id":"BOQ-07","description":"Final QC reporting and close-out","unit":"lot","quantity":1,"unit_rate_midr":60}
+  ]
+}

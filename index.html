@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#070e19" />
+  <title>PRODOPS Intelligence — Production & Operations</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<a href="#mainContent" class="skip-link">Skip to main content</a>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#overview" aria-label="PRODOPS Home">
+      <span class="brand-icon"><span>◈</span></span>
+      <span class="brand-text"><strong>PRODOPS</strong><small>INTELLIGENCE / 01</small></span>
+    </a>
+    <div class="side-label">COMMAND MODULES</div>
+    <nav class="nav" aria-label="Navigasi utama">
+      <button class="nav-link active" data-page="overview"><span class="nav-icon">▦</span> Executive Overview <span class="nav-index">01</span></button>
+      <button class="nav-link" data-page="production"><span class="nav-icon">⌁</span> Production Analytics <span class="nav-index">02</span></button>
+      <button class="nav-link" data-page="rokan"><span class="nav-icon">◎</span> Rokan Reactivation Case <span class="nav-index">03</span></button>
+      <button class="nav-link" data-page="planning"><span class="nav-icon">▤</span> Work Program & AFE <span class="nav-index">04</span></button>
+      <button class="nav-link" data-page="tender"><span class="nav-icon">⊞</span> Tender & TBE <span class="nav-index">05</span></button>
+      <button class="nav-link" data-page="contract"><span class="nav-icon">▱</span> Contract Tracker <span class="nav-index">06</span></button>
+      <button class="nav-link" data-page="risk"><span class="nav-icon">◇</span> Risk & Reporting <span class="nav-index">07</span></button>
+    </nav>
+    <div class="side-label">DATA GOVERNANCE</div>
+    <div class="side-note"><span class="tiny-dot teal"></span> Public historical production data<br /><span class="muted">16/1-12 Troldhaugen · Norway</span></div>
+    <div class="side-note"><span class="tiny-dot amber"></span> Business cases are illustrative<br /><span class="muted">No EP Cepu internal information</span></div>
+    <div class="sidebar-bottom">
+      <div class="profile-icon">NS</div><div><strong>PRODOPS Operations</strong><span>Production & Operations Support</span></div>
+    </div>
+  </aside>
+
+  <main class="main" id="mainContent">
+    <header class="topbar">
+      <div class="top-left"><button class="menu-toggle" id="menuToggle" aria-label="Buka menu">☰</button><span class="crumb">OPERATIONS / <strong id="breadcrumb">EXECUTIVE OVERVIEW</strong></span></div>
+      <div class="top-right"><span class="source-pill"><span class="tiny-dot teal"></span> PUBLIC DATA + SIMULATIONS</span><span class="clock" id="clock">12 OCT 2026</span><button class="icon-button" id="exportDataBtn" title="Download historical CSV" aria-label="Unduh data">↓</button></div>
+    </header>
+
+    <div class="page visible" id="page-overview">
+      <div class="eyebrow">PRODUCTION &amp; OPERATIONS ENGINEERING SUITE</div>
+      <section class="hero">
+        <div class="hero-copy"><div class="hero-chip"><span class="tiny-dot teal"></span> INTEGRATED ENGINEERING DECISION SUPPORT <span class="hero-chip-sep">/</span> MVP 2.0 · CV-ALIGNED</div>
+          <h1>Engineering clarity.<br /><span>Operational impact.</span></h1>
+          <p>From field performance and opportunity screening to work program, budgeting, bid evaluation, and executive reporting — in one connected workflow.</p>
+          <div class="hero-actions"><button class="btn primary" data-go="production">Explore production data <span>↗</span></button><button class="btn ghost" data-go="planning">Open AFE workpack →</button></div>
+        </div>
+        <div class="hero-viz"><div class="hero-viz-top"><span>ASSET VISUALIZATION</span><span>ILLUSTRATIVE 3D / DRAG TO ROTATE</span></div><canvas id="asset3d" aria-label="Ilustrasi fasilitas produksi 3D; bukan rekonstruksi fasilitas sebenarnya"></canvas><div class="hero-viz-bottom"><span><span class="tiny-dot teal"></span> GENERIC PRODUCTION FACILITY</span><span><button id="zoomOut" title="Zoom out" aria-label="Zoom out facility 3D view">−</button><button id="zoomIn" title="Zoom in" aria-label="Zoom in facility 3D view">+</button></span></div></div>
+      </section>
+      <section class="metric-grid" id="overviewKPIs" aria-label="Production KPI"></section>
+      <section class="two-col top-gap">
+        <div class="panel"><div class="panel-heading"><div><div class="eyebrow">01 / PERFORMANCE SIGNAL</div><h2>Gross oil production trend</h2></div><button class="subtle-button" data-go="production">Deep dive ↗</button></div><div class="chart-note">Observed monthly volume · 1,000 Sm³ · historical, not live</div><div id="overviewChart" class="svg-chart"></div><div class="chart-legend"><span><i class="legend-color oil"></i> Gross oil</span><span class="muted">Latest observation: July 2026</span></div></div>
+        <div class="panel decision-panel"><div class="panel-heading"><div><div class="eyebrow">02 / ENGINEERING-TO-BUSINESS</div><h2>Decision pathway</h2></div></div><div class="pathway"><div><span>01</span><strong>Observe production performance</strong><small>Measured monthly production record</small></div><div><span>02</span><strong>Screen engineering opportunities</strong><small>Rokan CV-based case, illustrative sample matrix</small></div><div><span>03</span><strong>Propose program and budget</strong><small>Costs, owners, milestones & economics</small></div><div><span>04</span><strong>Evaluate vendors and execution</strong><small>Illustrative commercial workflow</small></div></div><div class="information-strip"><span class="tiny-dot amber"></span> Operational cause, intervention uplift and contract prices are not inferred from the public production records.</div></div>
+      </section>
+      <section class="panel top-gap"><div class="panel-heading"><div><div class="eyebrow">CV-ALIGNED DECISION CHAIN</div><h2>From well candidate screening to execution readiness</h2></div><button class="btn primary small" data-go="rokan">Open Rokan case ↗</button></div><div class="three-col"><div class="fact-block"><span class="fact-marker teal">CV-REPORTED</span><h3>101 → 21 candidates</h3><p>Candidate's submitted CV describes screening 101 wells and 21 high-potential reactivation candidates. Underlying well database is not provided.</p></div><div class="fact-block"><span class="fact-marker amber">SIMULATED</span><h3>Engineering shortlist</h3><p>Reproducible example screening matrix uses eight invented anonymous candidates; it is <b>not</b> a subset of those 101 wells.</p></div><div class="fact-block"><span class="fact-marker slate">DOCUMENTED</span><h3>AFE → SOW/TOR → TBE</h3><p>Walk through one mock intervention with bill of quantities, approval gates, bid criteria and transparent worked evaluation.</p></div></div></section>
+      <section class="panel top-gap"><div class="panel-heading"><div><div class="eyebrow">03 / DATA INTEGRITY &amp; GOVERNANCE</div><h2>Evidence boundaries</h2></div></div><div class="three-col"><div class="fact-block"><span class="fact-marker teal">OBSERVED</span><h3>Historical production</h3><p>Gross oil, gross gas and produced water: Norwegian Offshore Directorate public FactPages data.</p></div><div class="fact-block"><span class="fact-marker amber">ILLUSTRATIVE</span><h3>Programs & commercial cases</h3><p>Work proposals, IDR budgets, supplier offers and contractor milestones are worked examples, not actual tenders.</p></div><div class="fact-block"><span class="fact-marker slate">REFERENTIAL</span><h3>Indonesia procurement</h3><p>PTK-007 is a reference for professional discussion; the scoring tool is not a compliance-certified tender system.</p></div></div></section>
+    </div>
+
+    <div class="page" id="page-production">
+      <div class="page-heading"><div><div class="eyebrow">MODULE 02 / REAL OBSERVATIONS</div><h1>Production analytics</h1><p>Gross production and field water-volume surveillance · Historical Norwegian offshore dataset.</p></div><div class="heading-controls"><label class="select-wrap">Start year <select id="startYear" aria-label="Filter observed data by starting year"><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option></select></label><button class="btn ghost small" id="downloadProd">Export CSV ↓</button></div></div>
+      <div class="data-disclosure"><span class="tiny-dot teal"></span><strong>Field: 16/1-12 Troldhaugen</strong> · NPDID 17196400 · Last observation Jul 2026 · Monthly figures are measured historical records, not a real-time feed</div>
+      <div class="metric-grid" id="prodKPIs"></div>
+      <div class="panel top-gap"><div class="panel-heading"><div><div class="eyebrow">OBSERVED MONTHLY VOLUMES</div><h2>Oil, water and gas time series</h2></div><div class="tabs" id="seriesTabs"><button class="active" data-series="oil">Gross oil</button><button data-series="water">Produced water</button><button data-series="gas">Gross gas</button></div></div><div id="productionChart" class="svg-chart large"></div><div class="chart-legend"><span id="seriesLegend"><i class="legend-color oil"></i> Gross oil · thousand Sm³/month</span><span class="muted">Zero recorded volumes are not assumed to indicate a confirmed shutdown.</span></div></div>
+      <section class="two-col top-gap"><div class="panel"><div class="panel-heading"><div><div class="eyebrow">PERFORMANCE CONTEXT</div><h2>Monthly observations</h2></div></div><div class="table-scroll"><table><thead><tr><th>Period</th><th>Gross oil (kSm³)</th><th>Gross gas (MMSm³)</th><th>Water (kSm³)</th></tr></thead><tbody id="monthlyRows"></tbody></table></div></div><div class="panel"><div class="panel-heading"><div><div class="eyebrow">METHOD NOTES</div><h2>Correct interpretation</h2></div></div><div class="method-notes"><div><strong>Observed volume</strong><p>Values are published in million Sm³ (oil and water) and billion Sm³ (gas); chart units are converted and disclosed.</p></div><div><strong>Surveillance flag</strong><p>Month-on-month changes are screening signals only. They do not establish subsurface or mechanical root causes.</p></div><div><strong>Planning interface</strong><p>Potential interventions require engineering validation, asset-specific constraints, data QC and commercial review.</p></div></div><button class="btn primary block" data-go="planning">Continue to work program →</button></div></section>
+    </div>
+
+    <div class="page" id="page-rokan">
+      <div class="page-heading">
+        <div>
+          <div class="eyebrow">MODULE 03 / OPERATIONAL FIELD SCREENING &amp; REVITALIZATION</div>
+          <h1>Rokan Zone Idle Well Screening Matrix</h1>
+          <p>Technical screening, multi-tier ranking, and candidate selection across 101 idle wells in the Central Sumatra Basin (CSB) with 12-parameter subsurface &amp; wellbore integrity methodology.</p>
+        </div>
+        <div class="heading-controls">
+          <button class="btn ghost small" id="exportRokanCandidates">Export 21 Priority Candidates ↓</button>
+          <button class="btn ghost small" id="exportRokan">Export Full 101 Matrix ↓</button>
+        </div>
+      </div>
+
+      <div class="data-disclosure teal-banner">
+        <span class="tiny-dot teal"></span>
+        <strong>DATA GOVERNANCE &amp; PROVENANCE</strong> · Grounded in <em>002_Well Screening Matrix Final.xlsx</em> (101 wells, 51 technical attributes) and <em>000_Slide Decks Idle Well Nations Project Final 1.pptx</em> (PT Nations Petroleum × Halliburton Consulting Phase 1 Final Study). Subsurface weight: 45%, Wellbore integrity weight: 35%, Operations &amp; commercial weight: 20%.
+      </div>
+
+      <section class="metric-grid" id="rokanKPIs"></section>
+
+      <!-- Executive Findings Grid from Slide 61 / 28 -->
+      <section class="three-col top-gap">
+        <div class="panel">
+          <div class="panel-heading">
+            <div>
+              <div class="eyebrow">PORTFOLIO HIGH-GRADING</div>
+              <h2>Candidate Breakdown</h2>
+            </div>
+          </div>
+          <div class="stat-highlight-box">
+            <div class="stat-big"><span class="highlight-num">21</span> <small class="text-muted">High-Graded Candidates</small></div>
+            <p class="body-copy-sm">Selected from 101 screened idle wells across 26 fields. <strong>12 candidates</strong> prioritized on primary remaining reserves (MBO), and <strong>9 candidates</strong> prioritized on New Zone Behind Pipe (NZBP) bypass upside.</p>
+          </div>
+          <div class="screening-weights">
+            <div><b>Remaining Reserves Candidates</b><span>12 Wells (6 T2 / 6 T3)</span></div>
+            <div><b>Behind-Pipe (NZBP) Candidates</b><span>9 Wells (2 T2 / 7 T3)</span></div>
+            <div><b>Average Net Pay Thickness</b><span>~30 ft / well</span></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-heading">
+            <div>
+              <div class="eyebrow">SUBSURFACE PRIZE</div>
+              <h2>13.0 MMBO NZBP Potential</h2>
+            </div>
+          </div>
+          <div class="stat-highlight-box">
+            <div class="stat-big"><span class="highlight-cyan">13.0</span> <small class="text-muted">MMBO Behind-Pipe Oil</small></div>
+            <p class="body-copy-sm">Identified across 35 unperforated sand intervals with oil saturation ($S_o > 40\%$). Exemplified by <em>Kopar-00033</em> and <em>Kopar-00031</em> ($2,390\text{ MBO}$ NZBP) where bypassed pay was validated with high-resistivity logs.</p>
+          </div>
+          <div class="screening-weights">
+            <div><b>Evaluated Behind-Pipe Wells</b><span>57 Evaluated / 35 Confirmed</span></div>
+            <div><b>Highest NZBP Well</b><span>Kopar-00031 (2,390 MBO)</span></div>
+            <div><b>Highest Rem. Reserve Well</b><span>Kopar-00033 (2,272 MBO)</span></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-heading">
+            <div>
+              <div class="eyebrow">FIELD PROFILE &amp; CONSTRAINTS</div>
+              <h2>Duri Slim-Hole &amp; Water Cut</h2>
+            </div>
+          </div>
+          <div class="stat-highlight-box">
+            <div class="stat-big"><span class="highlight-amber">42</span> <small class="text-muted">Duri Slim-Hole Injectors</small></div>
+            <p class="body-copy-sm">42 of the 101 idle wells are slim-hole steamflood injectors in Duri (DSF Areas 3 &amp; 5). These require dedicated injector profiling technology and workover re-engineering rather than conventional producer reactivations.</p>
+          </div>
+          <div class="screening-weights">
+            <div><b>High Water Cut Flag (&gt;95% WC)</b><span>Typical in mature producers</span></div>
+            <div><b>Tubular Pressure Testing</b><span>Mandatory pre-intervention</span></div>
+            <div><b>RST / PNL Pulsed Neutron Log</b><span>Required for bypassed oil confirmation</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Screening Table with Filters & Search -->
+      <section class="panel top-gap">
+        <div class="panel-heading">
+          <div>
+            <div class="eyebrow">101 WELLS MASTER INVENTORY · 51 PARAMETER REGISTER</div>
+            <h2>Well screening &amp; ranking register</h2>
+          </div>
+          <div class="heading-controls">
+            <label class="select-wrap">Filter view
+              <select id="rokanFilter" aria-label="Filter candidate screening view">
+                <option value="candidates">★ 21 High-Grade Candidates (Reserves + NZBP)</option>
+                <option value="all">All 101 Screened Wells</option>
+                <option value="tier2">Tier 2: Medium Complexity / Re-entry (57 wells)</option>
+                <option value="tier3">Tier 3: High Complexity / Rig Workover (42 wells)</option>
+                <option value="excluded">Excluded / Defer / Abandon (2 wells)</option>
+              </select>
+            </label>
+            <label class="select-wrap">Field
+              <select id="rokanFieldFilter" aria-label="Filter by field">
+                <option value="all">All Fields (26 fields)</option>
+              </select>
+            </label>
+            <input type="text" id="rokanSearch" class="search-input" placeholder="Search well name or formation..." aria-label="Search well name or formation" autocomplete="off" />
+          </div>
+        </div>
+
+        <div class="table-scroll">
+          <table class="wide" id="rokanTable">
+            <thead>
+              <tr>
+                <th>Well ID</th>
+                <th>Field / Zone</th>
+                <th>Formation / Sands</th>
+                <th>Status / Idle Yrs</th>
+                <th>Last Oil (BOPD)</th>
+                <th>Water Cut (%)</th>
+                <th>Rem. Res (MBO)</th>
+                <th>NZBP (MBO)</th>
+                <th>Score / 100</th>
+                <th>Tier</th>
+                <th>High-Grade Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="rokanRows"></tbody>
+          </table>
+        </div>
+        <p class="small-print" id="rokanTableCount">Displaying well screening records from Halliburton Consulting Phase 1 Final Study.</p>
+      </section>
+
+      <!-- Technical Detail Card (Dynamic when a well is selected) -->
+      <div class="panel top-gap" id="rokanWellDetail" style="display: none;">
+        <div class="panel-heading">
+          <div>
+            <div class="eyebrow">WELLBORE &amp; RESERVOIR DIAGNOSTIC DOSSIER</div>
+            <h2 id="rokanDetailTitle">Well Details</h2>
+          </div>
+          <button class="btn ghost small" id="rokanCloseDetail">Close dossier ✕</button>
+        </div>
+        <div id="rokanDetailContent"></div>
+      </div>
+
+      <!-- 12 Parameter Screening Methodology Breakdown -->
+      <section class="two-col top-gap">
+        <div class="panel">
+          <div class="panel-heading">
+            <div>
+              <div class="eyebrow">EVALUATION FRAMEWORK (HALLIBURTON CONSULTING METHODOLOGY)</div>
+              <h2>12-parameter screening rubric &amp; weights</h2>
+            </div>
+          </div>
+          <div class="screening-weights" id="rokanWeightsList"></div>
+          <p class="small-print">Scored on a 1 (Worst) to 5 (Best) rubric. Dimension balance: Subsurface &amp; Reservoir 45%, Wellbore Integrity 35%, Operations &amp; Commercial 20%. Hard knockouts apply to severe casing or barrier collapse, toxic HSE risks, or orphaned facility networks.</p>
+          <div class="information-strip">
+            <strong>Tier Thresholds:</strong> Tier 1: Quick Win / Surface ($\ge 75$ score) · Tier 2: Medium Re-entry / CT / Reperforating ($55–74$ score) · Tier 3: Complex Rig Workover / Sidetrack ($35–54$ score) · Excluded: HSE / Integrity / Facility Knockout.
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-heading">
+            <div>
+              <div class="eyebrow">ROADMAP TO INTERVENTION EXECUTION</div>
+              <h2>Technical recommendation → operational package</h2>
+            </div>
+          </div>
+          <div class="milestone-stack">
+            <div><span>01</span><strong>Tubular Pressure Testing &amp; Well Integrity Baseline</strong><small>Mandatory for aging wellbores (&gt;10–20 idle years) to verify casing integrity prior to rigless or rig mobilization.</small></div>
+            <div><span>02</span><strong>Cased-Hole Logging (RST / PNL / CBL)</strong><small>Confirm residual oil saturation in unperforated sands and barrier quality before setting bridge plugs or perforation guns.</small></div>
+            <div><span>03</span><strong>Detailed Engineering SOW &amp; Bill of Quantities</strong><small>Translate screened well parameters into workover unit, coiled tubing, acidization, or pump replacement line items.</small></div>
+            <div><span>04</span><strong>AFE Authorization &amp; SKK Migas WP&amp;B Alignment</strong><small>Reconcile program economics with internal hurdle rate and SKK Migas idle well reactivation quota.</small></div>
+          </div>
+          <button class="btn primary block" id="rokanToAFE">Transfer Selected Candidate to AFE Modeling →</button>
+        </div>
+      </section>
+    </div>
+
+    <div class="page" id="page-planning">
+      <div class="page-heading"><div><div class="eyebrow">MODULE 04 / ILLUSTRATIVE WP&B / AFE</div><h1>Work program & budget</h1><p>Risk-adjusted screening for conceptual programs. All project inputs are hypothetical.</p></div><button class="btn ghost small" id="resetPlans">Reset scenarios ↻</button></div>
+      <div class="data-disclosure amber-banner"><span class="tiny-dot amber"></span><strong>SIMULATION ONLY</strong> · Program costs, incremental rates and probabilities are assumptions; they are not data from Troldhaugen or Pertamina.</div>
+      <div class="metric-grid" id="budgetKPIs"></div>
+      <section class="two-col top-gap"><div class="panel"><div class="panel-heading"><div><div class="eyebrow">ANNUAL WORK PROGRAM VIEW</div><h2>Illustrative program portfolio</h2></div></div><div class="table-scroll"><table><thead><tr><th>Work package</th><th>Budget (IDR M)</th><th>Probability</th><th>Priority</th></tr></thead><tbody id="workRows"></tbody></table></div></div><div class="panel"><div class="panel-heading"><div><div class="eyebrow">EDIT THE ASSUMPTIONS</div><h2>Scenario analyzer</h2></div></div><label class="field">Select work package<select id="planSelect" aria-label="Select work package to edit"></select></label><div class="field-grid"><label class="field">Budget · IDR million<input id="planBudget" name="planBudget" type="number" inputmode="numeric" autocomplete="off" min="0" step="10" /></label><label class="field">Expected uplift · bopd<input id="planUplift" name="planUplift" type="number" inputmode="numeric" autocomplete="off" min="0" step="5" /></label><label class="field">Probability of success · %<input id="planProb" name="planProb" type="number" inputmode="numeric" autocomplete="off" min="0" max="100" step="1" /></label><label class="field">Execution · days<input id="planDuration" name="planDuration" type="number" inputmode="numeric" autocomplete="off" min="1" step="1" /></label></div><div class="separator"></div><div class="eyebrow">ECONOMIC ASSUMPTIONS / NOT A RESERVES FORECAST</div><div class="field-grid"><label class="field">Oil price · USD/bbl<input id="oilPrice" name="oilPrice" type="number" inputmode="numeric" autocomplete="off" min="0" step="1" value="70" /></label><label class="field">FX · IDR/USD<input id="fxRate" name="fxRate" type="number" inputmode="numeric" autocomplete="off" min="1" step="100" value="16000" /></label></div><div id="planResult" class="calc-result"></div><div class="small-print">Expected gross daily uplift value = assumed uplift × success probability × assumed oil price × assumed FX. Simplified payout excludes operating costs, decline, fiscal terms, taxes, discounting and downtime. Not an AFE or investment approval.</div></div></section>
+      <section class="panel top-gap" id="afePanel"><div class="panel-heading"><div><div class="eyebrow">ENGINEERING WORK PACKAGE / MOCK AFE</div><h2>Rigless well intervention — bill of quantities</h2></div><div class="heading-controls"><button class="btn ghost small" id="resetAFE">Reset BOQ ↻</button><button class="btn primary small" id="exportAFE">Export AFE CSV ↓</button></div></div><div class="data-disclosure amber-banner"><span class="tiny-dot amber"></span><strong>DRAFT ESTIMATE</strong> · Every unit rate and quantity below is hypothetical. BOQ total is separate from the four program-level cost assumptions above and is not a formal authorization for expenditure.</div><div class="table-scroll"><table class="wide"><thead><tr><th>Line item</th><th>Unit</th><th>Qty</th><th>Rate (IDR M)</th><th>Extended (IDR M)</th></tr></thead><tbody id="afeRows"></tbody></table></div><div class="afe-bottom"><div><label class="field">Contingency (%)<input id="afeCont" name="afeCont" type="number" inputmode="numeric" autocomplete="off" min="0" max="50" step="1" aria-label="Contingency percentage" /></label><label class="field">Budget comparison<select id="afeBudgetTarget" aria-label="Select work package budget target to compare"></select></label><div class="small-print">Contingency applies to direct estimated cost; no taxes, financing, additional contingency or inflation unless explicitly entered. Deviations do not indicate approval or rejection.</div></div><div id="afeSummary" class="calc-result"></div></div><div class="separator"></div><div class="panel-heading"><div><div class="eyebrow">PROGRAM GOVERNANCE</div><h2>Draft authorization workflow</h2></div></div><div class="approval-rail"><span>01 / Engineering review</span><span>02 / Cost & schedule review</span><span>03 / HSE + SCM input</span><span>04 / Delegated approval</span></div><p class="small-print">All steps are proposed gates; none is represented as approved or signed. For an actual AFE, engineering assumptions, cost basis, uncertainty, owner approval and applicable approval matrix must be validated.</p></section>
+    </div>
+
+    <div class="page" id="page-tender">
+      <div class="page-heading"><div><div class="eyebrow">MODULE 05 / PROCUREMENT / DOCUMENTS</div><h1>Tender evaluation</h1><p>Explainable supplier comparison with minimum technical and HSE eligibility checks.</p></div><button class="btn ghost small" id="resetVendors">Reset bid scenario ↻</button></div>
+      <div class="data-disclosure amber-banner"><span class="tiny-dot amber"></span><strong>HYPOTHETICAL PROCUREMENT</strong> · No real vendors, tender documents, bid prices or award recommendations.</div>
+      <div class="panel top-gap"><div class="panel-heading"><div><div class="eyebrow">ILLUSTRATIVE TECHNICAL & COMMERCIAL MATRIX</div><h2>Bid comparison — diagnostic campaign</h2></div></div><div class="tender-controls"><label class="field">Technical weight · %<input type="range" id="techWeight" name="techWeight" min="50" max="90" step="5" value="70" aria-label="Technical evaluation weight percentage"><span id="techWeightLabel">70%</span></label><label class="field">Technical passing score<input id="minTechnical" name="minTechnical" type="number" inputmode="numeric" autocomplete="off" min="1" max="100" value="75" /></label><div class="tender-definition"><strong>Illustrative evaluation logic</strong><p>Eligible = qualified + HSE pass + technical threshold. Eligible vendors: technical weighted score plus inverse-price commercial score. This does not claim PTK-007 conformity.</p></div></div><div class="table-scroll"><table class="wide"><thead><tr><th>Vendor</th><th>Tech /100</th><th>Bid (IDR M)</th><th>HSE</th><th>Qualified</th><th>Score</th><th>Result</th></tr></thead><tbody id="vendorRows"></tbody></table></div></div>
+      <section class="two-col top-gap"><div class="panel"><div class="panel-heading"><div><div class="eyebrow">CONCEPTUAL SOURCE-TO-CONTRACT</div><h2>Procurement workstream</h2></div></div><div class="milestone-stack"><div><span>01</span><strong>Define scope & deliverables</strong><small>Technical specification, acceptance criteria, safety</small></div><div><span>02</span><strong>Clarify bid evaluation criteria</strong><small>Eligibility, scoring rules, commercial assumptions</small></div><div><span>03</span><strong>Document assessment</strong><small>Technical-commercial comparison and exceptions</small></div><div><span>04</span><strong>Escalate recommendation</strong><small>Formal procedures and delegated approvals remain mandatory</small></div></div></div><div class="panel"><div class="panel-heading"><div><div class="eyebrow">GOVERNANCE</div><h2>Regulatory reference</h2></div></div><p class="body-copy">SKK Migas publishes a consolidated PTK-007 procurement reference and subsequent guidance. This demonstration deliberately does not implement company-specific tender thresholds, bid evaluation authorities, TKDN determinations or contract award procedures.</p><a class="external-link" href="https://civd.skkmigas.go.id/" target="_blank" rel="noopener noreferrer">Open SKK Migas CIVD reference ↗</a></div></section>
+      <section class="two-col top-gap"><div class="panel"><div class="panel-heading"><div><div class="eyebrow">DRAFT SOW / TOR</div><h2>Rigless well diagnostics support</h2></div><button class="btn ghost small" id="exportSOW">Export SOW/TOR draft ↓</button></div><div id="sowContent" class="document-view"><div><small>Objective</small><p>Provide fit-for-purpose well diagnostic and readiness services to support an engineering decision on a proposed rigless intervention.</p></div><div><small>Scope & activities</small><p>Review available well data; prepare site readiness and HSE documents; execute approved diagnostic runs if mobilization is authorized; hand over calibrated logs and interpretation.</p></div><div><small>Technical requirements</small><p>Provide personnel competency records, equipment calibration records, method statement, execution plan and contingency response criteria.</p></div><div><small>Deliverables / acceptance</small><p>Pre-job program, HSE readiness pack, daily reports, calibrated acquisition files, depth-reference QC, final technical summary, punch-list closeout.</p></div><div><small>Exclusions & dependencies</small><p>No production uplift guarantee, well access approval, barrier verification, logistics allocation or intervention authorization is presumed.</p></div></div><p class="small-print">This is a fictional procurement exercise. Actual SOW/TOR requires asset-specific engineering endorsement, vendor qualification, applicable SCM procedures and formal procurement approvals.</p></div><div class="panel"><div class="panel-heading"><div><div class="eyebrow">TRACEABLE TECHNICAL BID EVALUATION</div><h2>TBE scoring breakdown</h2></div></div><label class="field">Illustrative bidder<select id="tbeVendor" aria-label="Select bidder for detailed criteria breakdown"></select></label><div class="table-scroll"><table><thead><tr><th>Criterion</th><th>Weight</th><th>Rating /100</th><th>Weighted</th></tr></thead><tbody id="tbeCriteria"></tbody></table></div><div class="calc-result" id="tbeResult"></div><div class="small-print">HSE gate and qualification are pass/fail and are not overridden by a high technical score. Contract award requires separate authority, compliance and commercial review.</div><button class="btn primary block" id="exportTBE">Export TBE matrix CSV ↓</button></div></section>
+    </div>
+
+    <div class="page" id="page-contract">
+      <div class="page-heading"><div><div class="eyebrow">MODULE 06 / CONTRACT EXECUTION</div><h1>Contract tracker</h1><p>Track illustrative contract milestones and deliverables with transparent progress weights.</p></div><button class="btn ghost small" id="resetContract">Reset progress ↻</button></div>
+      <div class="data-disclosure amber-banner"><span class="tiny-dot amber"></span><strong>SIMULATED WORK PACKAGE</strong> · This is not an actual contract or contractor performance record.</div>
+      <section class="two-col top-gap"><div class="panel"><div class="panel-heading"><div><div class="eyebrow">CONTRACT OVERVIEW</div><h2>Production diagnostics services</h2></div></div><div class="contract-summary"><div><small>Illustrative reference</small><strong>CON-OPS-2026-001</strong></div><div><small>Baseline value</small><strong>IDR 780 million</strong></div><div><small>Planned duration</small><strong>28 days</strong></div><div><small>Contract owner</small><strong>Production / SCM</strong></div></div><div id="contractProgress" class="progress-outer"><div></div></div><div class="progress-caption"><span>WEIGHTED COMPLETION</span><strong id="contractPct">0%</strong></div></div><div class="panel"><div class="panel-heading"><div><div class="eyebrow">DELIVERABLE CONTROL</div><h2>Milestone checklist</h2></div></div><div id="contractMilestones" class="milestones"></div><div class="small-print">Progress = sum of completed milestone weights / 100%. No measured schedule adherence, actual costs, or quality acceptance data are available.</div></div></section>
+    </div>
+
+    <div class="page" id="page-risk">
+      <div class="page-heading"><div><div class="eyebrow">MODULE 07 / RISK AND REPORTING</div><h1>Risk & management reporting</h1><p>Risk matrix for proposed illustrative work programs and an exportable management snapshot.</p></div><button class="btn primary small" id="printBrief">Print management brief ↗</button></div>
+      <div class="data-disclosure amber-banner"><span class="tiny-dot amber"></span><strong>RISK REGISTER DEMO</strong> · Risk scores, owners and mitigations represent illustrative process controls; not an operational assurance assessment.</div>
+      <section class="two-col top-gap"><div class="panel"><div class="panel-heading"><div><div class="eyebrow">LIKELIHOOD × IMPACT</div><h2>5×5 risk matrix</h2></div></div><div id="riskMatrix" class="risk-matrix"></div><div class="small-print">Illustrative classification: Low 1–4, Moderate 5–9, High 10–16, Critical 17–25. Adapt to an operator-approved risk matrix in a real implementation.</div></div><div class="panel"><div class="panel-heading"><div><div class="eyebrow">EDIT RISK FACTORS</div><h2>Selected risk</h2></div></div><label class="field">Risk item<select id="riskSelect" aria-label="Select risk item to edit factors"></select></label><div class="field-grid"><label class="field">Likelihood (1–5)<input id="riskL" name="riskL" type="range" min="1" max="5" value="3" aria-label="Risk likelihood level 1 to 5" /></label><label class="field">Impact (1–5)<input id="riskI" name="riskI" type="range" min="1" max="5" value="3" aria-label="Risk impact severity level 1 to 5" /></label></div><div id="riskResult" class="calc-result"></div><div class="separator"></div><div id="riskDetails"></div></div></section>
+      <div class="panel top-gap" id="briefPanel"><div class="panel-heading"><div><div class="eyebrow">EXECUTIVE DECISION RECORD</div><h2>Management snapshot</h2></div><button class="btn ghost small" id="downloadBrief">Export briefing CSV ↓</button></div><div id="briefContent" class="brief-content"></div><p class="small-print">Present this as a reproducible portfolio case study, not a field proposal or official EP Cepu report. Figures marked observed derive from an offshore Norwegian field; all proposed actions are speculative examples.</p></div>
+    </div>
+
+    <footer><span>PRODOPS INTELLIGENCE — PRODUCTION &amp; OPERATIONS PLATFORM</span><span>Public data / illustrative commercial scenarios / not affiliated with Pertamina EP Cepu</span></footer>
+  </main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/data.js"></script><script src="assets/app.js"></script>
+</body>
+</html>

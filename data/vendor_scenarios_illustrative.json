@@ -1,0 +1,47 @@
+[
+  {
+    "id": "V-A",
+    "name": "Vendor Alpha (illustrative)",
+    "price_midr": 780,
+    "technical_score": 88.55,
+    "hse_pass": true,
+    "qualified": true,
+    "lead_days": 28,
+    "criteria": {
+      "method": 91,
+      "resources": 88,
+      "quality": 90,
+      "mobilization": 82
+    }
+  },
+  {
+    "id": "V-B",
+    "name": "Vendor Beta (illustrative)",
+    "price_midr": 725,
+    "technical_score": 77.35,
+    "hse_pass": true,
+    "qualified": true,
+    "lead_days": 35,
+    "criteria": {
+      "method": 80,
+      "resources": 82,
+      "quality": 75,
+      "mobilization": 65
+    }
+  },
+  {
+    "id": "V-C",
+    "name": "Vendor Gamma (illustrative)",
+    "price_midr": 665,
+    "technical_score": 89.55,
+    "hse_pass": false,
+    "qualified": true,
+    "lead_days": 26,
+    "criteria": {
+      "method": 95,
+      "resources": 92,
+      "quality": 85,
+      "mobilization": 78
+    }
+  }
+]

@@ -1,0 +1,6 @@
+*.bak
+.git/
+.playwright-cli/
+tests/
+artifacts/
+__pycache__/

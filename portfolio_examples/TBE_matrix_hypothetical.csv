@@ -1,0 +1,4 @@
+vendor_id,vendor_name,method_35pct,resources_30pct,quality_20pct,mobilization_15pct,tech_score_100,hse_gate,qualification_gate,eligible_demo,bid_IDR_million,provenance
+V-A,Vendor Alpha (illustrative),91,88,90,82,88.55,PASS,PASS,True,780,FICTIONAL
+V-B,Vendor Beta (illustrative),80,82,75,65,77.35,PASS,PASS,True,725,FICTIONAL
+V-C,Vendor Gamma (illustrative),95,92,85,78,89.55,FAIL,PASS,False,665,FICTIONAL

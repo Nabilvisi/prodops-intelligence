@@ -1,0 +1,6 @@
+[
+  {"id":"WP-001","title":"Production system diagnostic campaign","category":"Diagnostics","budget_midr":850,"uplift_bopd":90,"probability":0.65,"duration_days":30,"priority":"High","status":"Proposed","owner":"Production Engineering"},
+  {"id":"WP-002","title":"Artificial lift performance optimization","category":"Optimization","budget_midr":1250,"uplift_bopd":125,"probability":0.60,"duration_days":45,"priority":"High","status":"Screening","owner":"Operations"},
+  {"id":"WP-003","title":"Surface flow assurance investigation","category":"Integrity","budget_midr":670,"uplift_bopd":45,"probability":0.75,"duration_days":21,"priority":"Medium","status":"Planned","owner":"Facilities Engineering"},
+  {"id":"WP-004","title":"Well intervention feasibility assessment","category":"Intervention","budget_midr":1700,"uplift_bopd":170,"probability":0.48,"duration_days":60,"priority":"High","status":"Review","owner":"Subsurface / Operations"}
+]

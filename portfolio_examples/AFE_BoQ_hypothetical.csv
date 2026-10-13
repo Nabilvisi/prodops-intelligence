@@ -1,0 +1,14 @@
+DRAFT AFE EXAMPLE,NOT APPROVED / ALL COST RATES ARE HYPOTHETICAL
+line_id,description,unit,quantity,unit_rate_IDR_million,amount_IDR_million
+BOQ-01,Well history verification & program design,lot,1,85,85
+BOQ-02,Site access and HSE readiness,lot,1,220,220
+BOQ-03,"Rigless unit, crew & equipment",day,4,120,480
+BOQ-04,Well logging / diagnostic services,run,2,130,260
+BOQ-05,Completion consumables & spare parts,lot,1,140,140
+BOQ-06,Backup pressure-control equipment package,lot,1,200,200
+BOQ-07,Final QC reporting and close-out,lot,1,60,60
+direct,1445
+contingency_pct,12
+contingency,173.4
+total,1618.4
+status,draft / fictional / no operator data

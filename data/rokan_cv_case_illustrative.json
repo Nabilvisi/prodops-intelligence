@@ -1,0 +1,16 @@
+{
+  "evidence": "Metrics explicitly stated in submitted CV, not independently verified and not reconstructed from source well data",
+  "cv_reported": {"screened_wells": 101, "priority_candidates": 21, "reserve_potential_mmbo_approx": 13},
+  "illustration": "Eight completely invented anonymous candidate profiles. NOT a sample from the actual 101 wells.",
+  "scoring": {"data_quality": 0.2, "integrity": 0.25, "feasibility": 0.25, "potential_rating": 0.2, "water_tolerance_rating": 0.1, "scale": "1–5", "priority_rule": "Score >= 70 AND integrity >= 3 AND feasibility >= 3"},
+  "example_candidates": [
+    {"id":"DEMO-W01","water_cut_pct":30,"uplift_bopd":150,"data_quality":5,"integrity":4,"feasibility":5,"potential_rating":5,"water_tolerance_rating":4},
+    {"id":"DEMO-W02","water_cut_pct":57,"uplift_bopd":95,"data_quality":4,"integrity":4,"feasibility":4,"potential_rating":4,"water_tolerance_rating":3},
+    {"id":"DEMO-W03","water_cut_pct":88,"uplift_bopd":18,"data_quality":4,"integrity":3,"feasibility":2,"potential_rating":1,"water_tolerance_rating":1},
+    {"id":"DEMO-W04","water_cut_pct":23,"uplift_bopd":185,"data_quality":3,"integrity":2,"feasibility":4,"potential_rating":5,"water_tolerance_rating":5},
+    {"id":"DEMO-W05","water_cut_pct":42,"uplift_bopd":115,"data_quality":4,"integrity":5,"feasibility":4,"potential_rating":4,"water_tolerance_rating":4},
+    {"id":"DEMO-W06","water_cut_pct":73,"uplift_bopd":45,"data_quality":3,"integrity":4,"feasibility":3,"potential_rating":2,"water_tolerance_rating":2},
+    {"id":"DEMO-W07","water_cut_pct":35,"uplift_bopd":125,"data_quality":5,"integrity":3,"feasibility":4,"potential_rating":4,"water_tolerance_rating":4},
+    {"id":"DEMO-W08","water_cut_pct":65,"uplift_bopd":65,"data_quality":2,"integrity":2,"feasibility":2,"potential_rating":3,"water_tolerance_rating":2}
+  ]
+}
